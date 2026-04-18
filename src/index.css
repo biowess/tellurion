@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-sapphire: #010614;
+  --color-sapphire-light: #0B132B;
+  --color-sapphire-neon: #3A86FF;
+  
+  --color-day-sky: #87CEEB;
+  --color-day-cloud: #E0F2FE;
+  --color-day-accent: #0284C7;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-white bg-sapphire overflow-hidden;
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-\[shimmer_2s_infinite\] {
+  animation: shimmer 2s infinite;
+}
+
+.glass-panel {
+  @apply bg-sapphire-light/40 backdrop-blur-md border border-white/10 shadow-xl;
+}
+
+.glass-panel-light {
+  @apply bg-white/40 backdrop-blur-md border border-black/10 shadow-xl text-gray-900;
+}
+
+/* Scrollbar customization for webkit */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4); 
+}
+
