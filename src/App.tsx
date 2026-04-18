@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import GlobePage from './pages/GlobePage';
 import CountryPage from './pages/CountryPage';
 import ComparePage from './pages/ComparePage';
@@ -44,7 +44,7 @@ export default function App() {
         {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
       </AnimatePresence>
       
-      <BrowserRouter>
+      <HashRouter>
         <Layout>
           <Routes>
             <Route path="/" element={<GlobePage />} />
@@ -56,7 +56,7 @@ export default function App() {
             <Route path="/about" element={<AboutPage />} />
           </Routes>
         </Layout>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
