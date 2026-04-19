@@ -70,7 +70,7 @@ export default function BookmarksPage() {
   };
 
   return (
-    <div className="w-full h-full overflow-y-auto px-6 pt-20 pb-12 md:p-16">
+    <div className="w-full h-[100dvh] overflow-y-auto px-6 pt-20 pb-12 md:p-16">
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
